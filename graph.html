@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Network and PageRank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2em;
+            color: #007BFF;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            color: #007BFF;
+            font-weight: bold;
+        }
+        .image {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Network and PageRank</h1>
+        <p><span class="highlight">Nodes:</span> Individuals or entities in the network.</p>
+        <p><span class="highlight">Edges:</span> Relationships between nodes (e.g., friendships).</p>
+        <p>PageRank models the network as a directed graph, with edges representing the flow of influence.</p>
+        <p>The network can be represented as an adjacency matrix, with elements indicating links between nodes.</p>
+        <p>PageRank uses a <span class="highlight">stochastic matrix</span> derived from this adjacency matrix, normalized by each node's out-degree.</p>
+        <div class="image">
+            <img src="content/Picture1.png" alt="Network Graph">
+        </div>
+    </div>
+</body>
+</html>

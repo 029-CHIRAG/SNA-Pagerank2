@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageRank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        code {
+            background: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PageRank</h1>
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>1. Introduction</h2>
+            <p>PageRank is a ranking algorithm developed by Google founders Larry Page and Sergey Brin to measure the importance of web pages on the Internet. It assesses pages based on their incoming links.</p>
+            <p><strong>Key idea:</strong> A page is more valuable if linked to by other important pages.</p>
+        </section>
+
+        <section id="problems">
+            <h2>2. Problems with Existing Methods</h2>
+            <p>Existing search engines relied on keyword frequency for ranking, which led to manipulation through techniques like keyword stuffing. Before PageRank came along, search engines had several problems:</p>
+            <ul>
+                <li><strong>Irrelevant Results:</strong> Search results were often filled with pages that didn’t really match what users were looking for.</li>
+                <li><strong>Ranking Tricks:</strong> Some website owners used sneaky methods to boost their page rankings, making it hard to trust the results.</li>
+                <li><strong>Handling Growth:</strong> As more websites appeared, traditional search methods struggled to keep up and deliver useful results.</li>
+            </ul>
+        </section>
+
+        <section id="math-representation">
+            <h2>3. Mathematical Representation</h2>
+            <p>In mathematical terms, the PageRank of a page <code>P</code> can be expressed as:</p>
+            <p><code>PageRank (PR) = (1 - d) / N + d * Σ (PR(j) / L(j))</code></p>
+            <p>Let’s break down this formula:</p>
+            <ul>
+                <li><code>d</code> (the damping factor) represents the probability that a user will click on a link.</li>
+                <li><code>PR(j)</code> is the PageRank of a specific page.</li>
+                <li><code>L(j)</code> signifies the number of outbound links on page <code>j</code>.</li>
+            </ul>
+        </section>
+
+        <section id="steps">
+            <h2>4. Steps for Calculation</h2>
+            <ol>
+                <li><strong>Rank Distribution:</strong> As the algorithm progresses, the PageRank of the page is distributed among the outgoing links. For example, if a page has a high PageRank and many outbound links, each link will contribute to the overall impact of the page. This division ensures that the importance of linked pages is shared.</li>
+                <li><strong>Convergence:</strong> The iterative process continues until the PageRank score stabilizes or converges. Convergence occurs when the difference in PageRank scores between successive iterations falls below a certain threshold. At this point, the algorithm has reached a stable ranking, and the PageRank scores indicate the relative importance of each web page.</li>
+                <li><strong>Ranking and Display:</strong> Pages are ranked based on their final PageRank scores. Pages with a higher PageRank score are considered more influential or essential. Search engines can use these points to display search results, so pages with higher rankings are usually shown closer to the top.</li>
+            </ol>
+            <p>By considering the link structure and updating the PageRank score iteratively, the algorithm effectively measures the importance of web pages relative to others. It allows ranking pages based on their popularity and influence, helping to develop more accurate and relevant search engines.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 PageRank Overview</p>
+    </footer>
+</body>
+</html>

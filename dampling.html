@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Damping Factor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2em;
+            color: #007BFF;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        .highlight {
+            color: #007BFF;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Damping Factor</h1>
+        <p><span class="highlight">The damping factor</span> is a critical component of the PageRank algorithm, influencing how the algorithm ranks web pages based on their link structure. It addresses the problem of infinite loops that can occur in the context of the web’s interconnected nature.</p>
+        <p>The damping factor is a probability value typically set between <span class="highlight">0 and 1</span>, with a common default value of around <span class="highlight">0.85</span>. It represents the likelihood that a user, when navigating through the web, will continue clicking on links rather than randomly jumping to a new page.</p>
+        <h2>Purpose of the Damping Factor</h2>
+        <ul>
+            <li><span class="highlight">Preventing Infinite Loops:</span> In a web context, a user could theoretically get stuck in a cycle of pages (e.g., two pages that link to each other). The damping factor helps mitigate this by introducing a random jump, ensuring the algorithm does not get trapped in such loops.</li>
+            <li><span class="highlight">Incorporating Randomness:</span> The damping factor introduces a degree of randomness to the user's navigation behavior, which reflects more realistic browsing patterns. This randomness helps ensure that even less popular or poorly linked pages have a chance to be considered in the ranking.</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageRank: Comprehensive Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background: #0056b3;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #0056b3;
+            margin-top: 20px;
+        }
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+        .highlight {
+            background: #f0f8ff;
+            padding: 10px;
+            border-left: 4px solid #0056b3;
+            margin: 20px 0;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #0056b3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PageRank: Comprehensive Overview</h1>
+    <p>Understanding the algorithm that revolutionized web search</p>
+</header>
+
+<div class="container">
+    <h2>Introduction</h2>
+    <p>PageRank is a ranking algorithm developed by Larry Page and Sergey Brin, the founders of Google. It measures the importance of web pages by evaluating the quality and quantity of links pointing to them. The key idea is that a page linked by important pages is also considered important. This algorithm was a major breakthrough in web search.</p>
+
+    <h2>Historical Context</h2>
+    <p>Developed in the late 1990s, PageRank addressed the inefficiencies of earlier search engines, which relied heavily on keyword frequency and were prone to manipulation (e.g., keyword stuffing). The seminal research paper "The PageRank Citation Ranking: Bringing Order to the Web" introduced a link-based ranking system that improved the relevance and trustworthiness of search results.</p>
+
+    <h2>Core Concepts</h2>
+    <ul>
+        <li><strong>Graph Representation:</strong> Web pages are modeled as nodes in a directed graph, with links as edges.</li>
+        <li><strong>Damping Factor:</strong> A probability factor (typically 0.85) that models user behavior by assuming they either click links or jump randomly to a new page.</li>
+        <li><strong>Mathematical Formula:</strong> PageRank (PR) = (1 - d) + d * Σ (PR of linking pages / Outbound links)</li>
+    </ul>
+
+    <h2>Steps for Calculation</h2>
+    <ol>
+        <li>Distribute initial PageRank values equally among pages.</li>
+        <li>Iteratively update PageRank values based on incoming links until convergence.</li>
+        <li>Rank pages based on their final scores.</li>
+    </ol>
+
+    <h2>Applications</h2>
+    <ul>
+        <li><strong>Community Detection:</strong> Identifies key influencers in social networks.</li>
+        <li><strong>Recommendation Systems:</strong> Suggests relevant content or connections.</li>
+        <li><strong>Fraud Detection:</strong> Analyzes suspicious patterns in financial networks.</li>
+        <li><strong>Epidemic Modeling:</strong> Predicts the spread of information or diseases.</li>
+    </ul>
+
+    <h2>Advantages</h2>
+    <ul>
+        <li>Balances the quality and quantity of links.</li>
+        <li>Resilient to manipulation by spam links.</li>
+        <li>Effective for large-scale networks.</li>
+        <li>Can adapt to weighted networks for more realistic analysis.</li>
+    </ul>
+
+    <h2>Disadvantages</h2>
+    <ul>
+        <li>Biased towards older or well-connected pages.</li>
+        <li>Assumes all connections are positive, ignoring adversarial links.</li>
+        <li>Struggles with dynamic or multilayered networks.</li>
+        <li>Requires significant computational resources for large networks.</li>
+    </ul>
+
+    <h2>Case Studies</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Case</th>
+                <th>Observation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Random Surfer</td>
+                <td>Even pages without incoming links get a small PageRank due to the damping factor.</td>
+            </tr>
+            <tr>
+                <td>Hierarchical Linking</td>
+                <td>PageRank accumulates more at higher levels, like the home page.</td>
+            </tr>
+            <tr>
+                <td>Sink Pages</td>
+                <td>Pages with no outbound links stop PageRank flow.</td>
+            </tr>
+            <tr>
+                <td>Fully Meshed Links</td>
+                <td>PageRank gets evenly distributed among all pages.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Limitations</h2>
+    <ul>
+        <li>Focuses on direct connections and doesn't account for context or strength of relationships.</li>
+        <li>Fails to handle negative relationships or dynamic changes efficiently.</li>
+    </ul>
+
+    <h2>References</h2>
+    <ul>
+        <li>Wikipedia</li>
+        <li>GeeksForGeeks</li>
+        <li>"Social Network Analysis" by Tanmoy Chakraborty</li>
+    </ul>
+</div>
+
+<footer>
+    <p>&copy; 2024 Group 3 - Social Network Analysis</p>
+</footer>
+
+</body>
+</html>
